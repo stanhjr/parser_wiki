@@ -1,6 +1,6 @@
 import sqlite3
 
-from parser.schemas import PoliticianRecord
+from schemas import PoliticianRecord
 
 
 def create_parse_info_table():
