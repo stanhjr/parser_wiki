@@ -147,3 +147,4 @@ sonarqube/logs
 
 .terraform
 docker-compose.override.yml
+.idea/misc.xml

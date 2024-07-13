@@ -115,6 +115,22 @@ def get_politician_count(is_update: int = 0) -> int:
     return cursor.fetchone()[0]
 
 
+def update_politician_not_data(politician_id: str):
+    conn = sqlite3.connect("politicians_v2.db")
+    cursor = conn.cursor()
+
+    params = (3, politician_id)
+    sql = """
+    UPDATE politicians 
+    SET 
+        is_update = ?
+    WHERE id = ?
+    """
+
+    cursor.execute(sql, params)
+    conn.commit()
+    conn.close()
+
 def update_politician(politician: PoliticianRecord):
     conn = sqlite3.connect("politicians_v2.db")
     cursor = conn.cursor()
