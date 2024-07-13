@@ -185,7 +185,7 @@ def get_politicians(
 
 
 if __name__ == "__main__":
-    print(get_politician_count(is_update=1))
+    print(get_politician_count(is_update=0))
     # for p in get_politicians(is_update=1, limit=1000, offset=10):
     #     print(p)
     # for i in get_politicians(is_update=1, limit=500):
